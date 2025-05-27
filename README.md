@@ -100,6 +100,7 @@
   <img src="images/cover.png" width="400">
 </a>
 </div>  
+
 The core objective with this workflow is to make the best flux inpainting for ComfyUI that is done correctly. Meaning: 
 * Compositing (not damaging the non-inpainted original pixels with VAE degradation)
 * Making sure the image it’s divisible by 8 (preserving the original image quality by not stretching it while using it).
