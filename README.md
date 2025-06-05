@@ -105,9 +105,9 @@ The core objective with this workflow is to make the best flux inpainting for Co
 * Compositing (not damaging the non-inpainted original pixels with VAE degradation)
 * Making sure the image it’s divisible by 8 (preserving the original image quality by not stretching it while using it).
 
-It started as me trying to make a simple Flux inpainting workflow, but After that it start growing on me the idea to make this as complete and well done as possible. It ended up not being that simple anymore, as I added more and more interesting tools and options, either to make life easier or to improve the inpainting results.
+It started as me trying to make a simple Flux inpainting workflow, but after that the idea to make this as complete and well done as possible started growing on me. It ended up not being that simple anymore, as I added more and more interesting tools and options, either to make life easier or to improve the inpainting results.
 
-As I pointed out here,  Comfyorg themselves forgets about compositing, teach it the wrong way in their basic inpaint workflow, unfortunately. This led to a widespread of bad inpainting workflows out there and pretty much all workflows have this basic mistake.
+As [I pointed out here](https://www.reddit.com/r/StableDiffusion/comments/1gy87u4/this_looks_like_an_epidemic_of_bad_workflows/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button),  Comfyorg themselves forgets about compositing and teaches it in the wrong way in their basic inpaint workflow, unfortunately. This led to a widespread of bad inpainting workflows out there and pretty much all workflows have this basic mistake.
 
 Because the expanded workflow might look rather monstrous and scary, and frankly not user friendly, I also aimed to publish a “Compact” version, where everything is hidden and nodes are kept in a clean interface with options more at reach. And some decisions are made for you. They are supposed to be the same but one thing or other might be missing on Compact as it lags behind on me updating it. Also, it’s way harder for the user to customize it, for example adding a new control-net.
 
