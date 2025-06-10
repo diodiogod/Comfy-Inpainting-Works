@@ -2,6 +2,17 @@
 
 ---
 
+## \[v8.12]
+### 🐞 Bug Prevention
+
+1. Remove dependencies (no longer needed) cutom_nodes:
+   * [Crystools](https://github.com/crystian/ComfyUI-Crystools) > changes all swithc nodes to index switch
+   * [Logic](https://github.com/theUpsider/ComfyUI-Logic) > I had missed one Float node on Control-Panel
+
+2. Resize Mask (context mask) will error out, node #1834, on v8.11 I have changed mask resize to use lanczos, but it is bugged, so I changed that to other method like bicube. let's wait for the dev to fix it
+
+---
+
 ## \[v8.1] - 06/06/25
 
 ### 🐞 Bug Prevention
