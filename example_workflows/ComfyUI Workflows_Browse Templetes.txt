@@ -1,0 +1,3 @@
+Here, the most up-to-date workflow versions will be stored to be opened in the ComfyUI menu when installed as a ComfyUI custom node through the manager:
+
+Menu > Workflows > Browse Templates

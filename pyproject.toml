@@ -1,0 +1,15 @@
+[project]
+name = "inpainting-works"
+description = "🔷Go to the top menu>Workflow>Browse Templates🔷. This is a collection of my Inpainting workflows for Flux (expanded and COMPACT) + others. Previously called: 'Proper Flux Control-Net inpainting and/or outpainting with batch size - Alimama or Flux Fill'. By installing this 'node' you can always keep them up to date by updating on the manager. This is not a new custom node. You will still need to install all other custom nodes used on the workflows. It has all these features: Flux Dev with Alimama 🔷 Batches 🔷 Flux Fill 🔷 Flux Tool Loras: Depth or Canny 🔷 Mask grow with blur 🔷 Mask Aura 🔷 Outpainting 🔷 LoRA support 🔷 Localized Area Inpainting 🔷 Daemon Detailer 🔷 Fast Fill (like Auto1111 Fill) 🔷 Negative Thresholding 🔷 Loops 🔷 Prompt Scheduling 🔷 LoRA Scheduling 🔷 Original Image Resize 🔷 Compositing 🔷 Keep Original Metadata 🔷 Save Metadata / CivitAI Metadata. You will also find my 'Flux LoRA Block Weights Preset Tester' here as well."
+version = "8.1.2"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/diodiogod/Comfy-Inpainting-Works"
+#  Used by Comfy Registry https://registry.comfy.org
+
+[tool.comfy]
+PublisherId = "diogod"
+DisplayName = "Comfy Inpainting Works"
+Icon = "https://github.com/diodiogod/Comfy-Inpainting-Works/blob/main/images/logo.png"
+includes = []

@@ -1,5 +1,7 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a id="readme-top"></a>
+
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -8,9 +10,8 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
+
 <!--
 *** I'm using markdown "reference style" links for readability.
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
@@ -18,23 +19,24 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![](https://dcbadge.limes.pink/api/server/EwKE8KBDqD)](https://discord.gg/EwKE8KBDqD)
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 
-
 <!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://discord.gg/EwKE8KBDqD">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Comfy-Inpainting-Works</h3>
+<h3 align="center">Comfy-Inpainting-Works</h3>
 
-  <p align="center">
+<p align="center">
      This repository is dedicated to maintaining, updating, fixing bugs and keeping up to date BOTH my Expanded and Compact inpainting ComfyUI workflow. It was previously hosted on CivitAI called: 
     <br />
     <br /> 
@@ -42,14 +44,13 @@
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
+    ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -91,17 +92,18 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 <div align="center">
 <a href="https://github.com/diodiogod/Comfy-Inpainting-Works">
   <img src="images/cover.png" width="400">
 </a>
-</div>  
+</div>
 
 The core objective with this workflow is to make the best flux inpainting for ComfyUI that is done correctly. Meaning: 
+
 * Compositing (not damaging the non-inpainted original pixels with VAE degradation)
 * Making sure the image it’s divisible by 8 (preserving the original image quality by not stretching it while using it).
 
@@ -115,14 +117,16 @@ Because the expanded workflow might look rather monstrous and scary, and frankly
 
 ### Features
 
-Flux Dev with Alimama 🔷 Flux Fill 🔷 Flux Tool Loras: Depth or Canny 🔷 Mask grow with blur 🔷 Mask Aura 🔷 Outpainting 🔷 LoRA support 🔷 Localized Area Inpainting 🔷 Daemon Detailer 🔷 Fast Fill (like Auto1111 Fill) 🔷 Negative Thresholding 🔷 Loops 🔷 Prompt Scheduling 🔷 LoRA Scheduling 🔷 Original Image Resize 🔷 Compositing 🔷 Keep Original Metadata 🔷 Save Metadata / CivitAI Metadata
+Flux Dev with Alimama 🔷 Batches 🔷 Flux Fill 🔷 Flux Tool Loras: Depth or Canny 🔷 Mask grow with blur 🔷 Mask Aura 🔷 Outpainting 🔷 LoRA support 🔷 Localized Area Inpainting 🔷 Daemon Detailer 🔷 Fast Fill (like Auto1111 Fill) 🔷 Negative Thresholding 🔷 Loops 🔷 Prompt Scheduling 🔷 LoRA Scheduling 🔷 Original Image Resize 🔷 Compositing 🔷 Keep Original Metadata 🔷 Save Metadata / CivitAI Metadata
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Videos:
+
 Most of the features and how to use them was explained in this video where I tried to show most parts of this workflow. As I increment new things, I’ll make new videos, so stay tuned and subscribe to the YouTube channel. 
 
 ### [Full explanation v6.2](https://youtu.be/2p-zIbSZAvA)
+
 <a href="https://youtu.be/2p-zIbSZAvA">
   <img src="https://img.youtube.com/vi/2p-zIbSZAvA/maxresdefault.jpg" width="400">
 </a>
@@ -131,24 +135,23 @@ Most of the features and how to use them was explained in this video where I tri
 
 <summary>Other more recent videos:</summary>
 
-
 ### [V.7 Expanded](https://youtu.be/cPg49GoHpSI)
+
 <a href="https://youtu.be/cPg49GoHpSI">
   <img src="https://img.youtube.com/vi/cPg49GoHpSI/maxresdefault.jpg" width="400">
 </a>
 
 ### [V.7 Compact](https://youtu.be/oY1B-5x9kh4)
+
 <a href="https://youtu.be/oY1B-5x9kh4">
   <img src="https://img.youtube.com/vi/oY1B-5x9kh4/maxresdefault.jpg" width="400">
 </a>
 
-
 </details>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 ### Prerequisites
@@ -160,17 +163,21 @@ Most of the features and how to use them was explained in this video where I tri
 3- After that you can drop the workflow .json file inside a ComfyUI screen and install all missing nodes trough the manager. IF one fails, you might want to visit each custom node page and might need to install it manually with git clone on `ComfyUI\custom_nodes` folder.
 
 * Exemple, inside `ComfyUI\custom_nodes`:
+  
   ```
   git clone https://github.com/rgthree/rgthree-comfy
   ```
-You can also update a custom node with git (but I recommend to do it with the manager)
+  
+  You can also update a custom node with git (but I recommend to do it with the manager)
 * Go inside the `custom_nodes` folder: 
+  
   ```
   git pull
   ```
 
 > [!WARNING]
 > Keep in mind it’s very common that every time comfyui updates, specially the [Comfyui Frontend](https://github.com/Comfy-Org/ComfyUI_frontend), something in this workflow might break. I’ll try my best to keep things up do date but it might not always be possible.
+
 <details>
 
 <summary>Here is a list of all custom nodes on this workflow:</summary>
@@ -188,6 +195,7 @@ _This section will be fleshed out in more detail soon. Below is a structured pla
   <summary>Show Written Usage</summary>
 
 ### 1. Loading the Models
+
 <details>
   <summary>Expand</summary>
 
@@ -198,6 +206,7 @@ _This section will be fleshed out in more detail soon. Below is a structured pla
 </details>
 
 ### 2. ControlNet Integration
+
 <details>
   <summary>Expand</summary>
 
@@ -207,6 +216,7 @@ _This section will be fleshed out in more detail soon. Below is a structured pla
 </details>
 
 ### 3. Masking Techniques
+
 <details>
   <summary>Expand</summary>
 
@@ -217,6 +227,7 @@ _This section will be fleshed out in more detail soon. Below is a structured pla
 </details>
 
 ### 4. Outpainting
+
 <details>
   <summary>Expand</summary>
 
@@ -225,6 +236,7 @@ _(Details coming soon)_
 </details>
 
 ### 5. Basic LoRA
+
 <details>
   <summary>Expand</summary>
 
@@ -233,6 +245,7 @@ _(Details coming soon)_
 </details>
 
 ### 6. Localized Area Inpainting
+
 <details>
   <summary>Expand</summary>
 
@@ -241,6 +254,7 @@ _(Details coming soon)_
 </details>
 
 ### 7. Daemon Detailer
+
 <details>
   <summary>Expand</summary>
 
@@ -249,6 +263,7 @@ _(Details coming soon)_
 </details>
 
 ### 8. Fast Fill (Auto1111-style)
+
 <details>
   <summary>Expand</summary>
 
@@ -257,6 +272,7 @@ _(Details coming soon)_
 </details>
 
 ### 9. Negative Thresholding
+
 <details>
   <summary>Expand</summary>
 
@@ -265,6 +281,7 @@ _(Details coming soon)_
 </details>
 
 ### 10. Loops
+
 <details>
   <summary>Expand</summary>
 
@@ -273,6 +290,7 @@ _(Details coming soon)_
 </details>
 
 ### 11. Scheduling
+
 <details>
   <summary>Expand</summary>
 
@@ -282,6 +300,7 @@ _(Details coming soon)_
 </details>
 
 ### 12. Resizing and Compositing
+
 <details>
   <summary>Expand</summary>
 
@@ -292,6 +311,7 @@ _(Details coming soon)_
 </details>
 
 ### 13. Metadata
+
 <details>
   <summary>Expand</summary>
 
@@ -304,22 +324,20 @@ _(Details coming soon)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [x] Discord Channel
 - [x] Implement Loops
 - [ ] Look into implementing Flux Tool: Redux
 
-
 See the [open issues](https://github.com/diodiogod/Comfy-Inpainting-Works/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -342,7 +360,9 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Discord Server -->
+
 ## Discord Server
+
 [![](https://dcbadge.limes.pink/api/server/EwKE8KBDqD)](https://discord.gg/EwKE8KBDqD)
 
 Comfy Inpainting Works Discord Server: https://discord.gg/EwKE8KBDqD 
@@ -350,6 +370,7 @@ Comfy Inpainting Works Discord Server: https://discord.gg/EwKE8KBDqD
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
+
 ## Contact
 
 Diogod - [Discord: diogod_59773](https://www.discordapp.com/users/diogod_59773)
@@ -358,9 +379,8 @@ Project Link: [https://github.com/diodiogod/Comfy-Inpainting-Works](https://gith
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
 List of ComfyUI Custom Nodes or resources!
@@ -371,12 +391,12 @@ List of ComfyUI Custom Nodes or resources!
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
+
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/diodiogod/Comfy-Inpainting-Works.svg?style=for-the-badge
 [contributors-url]: https://github.com/diodiogod/Comfy-Inpainting-Works/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/diodiogod/Comfy-Inpainting-Works.svg?style=for-the-badge
