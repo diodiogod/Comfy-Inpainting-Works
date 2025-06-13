@@ -430,8 +430,5 @@ List of ComfyUI Custom Nodes or resources!
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 
-[version-shield]: https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdiodiogod%2FComfy-Inpainting-Works%2Fmain%2Fpyproject.toml&query=%24.project.version&label=Version&color=blue&style=for-the-badge
+[version-shield]: https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdiodiogod%2FComfy-Inpainting-Works%2Fmain%2Fpyproject.toml&query=%24.project.version&label=Version&color=red&style=for-the-badge
 [version-url]: pyproject.toml
- [license-shield]: https://img.shields.io/github/license/diodiogod/Comfy-Inpainting-Works.svg?style=for-the-badge
- [license-url]: https://github.com/diodiogod/Comfy-Inpainting-Works/blob/master/LICENSE.txt
- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
