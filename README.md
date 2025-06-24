@@ -50,7 +50,7 @@
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
     ·
-    <a href="https://github.com/diodiogod/Comfy-Inpainting-Works?tab=readme-ov-file#getting-started">Install it with the Manager</a>
+    <a href="#getting-started">Install it with the Manager</a>
   </p>
 </div>
 
