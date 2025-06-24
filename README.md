@@ -49,6 +49,8 @@
     <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    ·
+    <a href="https://github.com/diodiogod/Comfy-Inpainting-Works?tab=readme-ov-file#getting-started">Install it with the Manager</a>
   </p>
 </div>
 
@@ -161,9 +163,22 @@ Most of the features and how to use them was explained in this video where I tri
 
 1- This is a ComfyUI workflow so, first of all you will need ComfyUI. [Head up there and install it](https://github.com/comfyanonymous/ComfyUI)
 
-2- This uses a lot of custom nodes. I’m sorry, but they are needed. So, I recommend to install [ComfyUI-Manager](https://github.com/Comfy-Org/ComfyUI-Manager).
+2- This workflow uses a lot of custom nodes. I’m sorry, but they are needed. So, I recommend to install [ComfyUI-Manager](https://github.com/Comfy-Org/ComfyUI-Manager).
 
-3- After that you can drop the workflow .json file inside a ComfyUI screen and install all missing nodes trough the manager. IF one fails, you might want to visit each custom node page and might need to install it manually with git clone on `ComfyUI\custom_nodes` folder.
+4- This workflow is now a ["custom_node"](https://registry.comfy.org/publishers/diogod/nodes/inpainting-works) and can be installed manually or through the ComfyUI Manager. It is not a real "node". This is so  you can keep it up-to-date more easily AND so you can access the workflow more convinently by going into you comfyUI upper tab `Workflow > Browse Templates > Comfy_Inpainting_Works`
+
+You can Find it on the ComfyUI Manager by searching for `inpainting-works`.
+
+OR
+
+To mannually install it:
+* Go to your ComfyUI custom_node installation folder `ComfyUI\custom_nodes` and install this repo as a custom node:
+  
+  ```
+  git clone https://registry.comfy.org/publishers/diogod/nodes/inpainting-works
+  ```
+  
+3- After you have the Manager, you can either drop the workflow .json file inside a ComfyUI screen or If you installed thi as a custom node go to `Workflow > Browse Templates > Comfy_Inpainting_Works`. After opening the workflow you will probably find a lot of red nodes, so you needd to install all missing nodes trough the manager. IF one fails, you might want to visit each custom node page and might need to install it manually with git clone on `ComfyUI\custom_nodes` folder.
 
 * Exemple, inside `ComfyUI\custom_nodes`:
   
@@ -186,6 +201,7 @@ Most of the features and how to use them was explained in this video where I tri
 <summary>Here is a list of all custom nodes on this workflow:</summary>
 
 List:
+placeholder
 
 </details>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
