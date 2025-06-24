@@ -28,7 +28,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Dynamic TOML Badge][version-shield]][version-url]
 
-
 <!-- PROJECT LOGO -->
 
 <br />
@@ -46,9 +45,9 @@
     Proper Flux Control-Net inpainting and/or outpainting with batch size - ComfyUI - Alimama or Flux Fill
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/diodiogod/Comfy-Inpainting-Works/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/diodiogod/Comfy-Inpainting-Works/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
     ·
     <a href="#getting-started">Install it with the Manager</a>
   </p>
@@ -172,12 +171,13 @@ You can Find it on the ComfyUI Manager by searching for `inpainting-works`.
 OR
 
 To mannually install it:
+
 * Go to your ComfyUI custom_node installation folder `ComfyUI\custom_nodes` and install this repo as a custom node:
   
   ```
   git clone https://registry.comfy.org/publishers/diogod/nodes/inpainting-works
   ```
-  
+
 3- After you have the Manager, you can either drop the workflow .json file inside a ComfyUI screen or If you installed thi as a custom node go to `Workflow > Browse Templates > Comfy_Inpainting_Works`. After opening the workflow you will probably find a lot of red nodes, so you needd to install all missing nodes trough the manager. IF one fails, you might want to visit each custom node page and might need to install it manually with git clone on `ComfyUI\custom_nodes` folder.
 
 * Exemple, inside `ComfyUI\custom_nodes`:
@@ -187,6 +187,7 @@ To mannually install it:
   ```
   
   You can also update a custom node with git (but I recommend to do it with the manager)
+
 * Go inside the `custom_nodes` folder: 
   
   ```
@@ -416,6 +417,7 @@ List of ComfyUI Custom Nodes or resources!
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
