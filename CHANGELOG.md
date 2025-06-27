@@ -2,10 +2,34 @@
 
 ---
 
+## \[v9.0.0] - 27/06/25
+
+### ➕ New
+
+1. ❗ Added Inicial Flux Kontext support!
+   
+   * You can now load a 4th model option and inpaint using Flux Kontext!
+   
+   * It works with positive prompt with direct orders, [read the guide here](https://docs.bfl.ai/guides/prompting_guide_kontext_i2i).
+   
+   * As of right now **it does NOT** work with Flux Tools Depth or Canny and it won't work with Alimama Control-net. So those are disable automatically when you choose Flux Kontext.
+   
+   * Flux Kontext likes 2.5 guidance. So I automatically deducted -1 from the normal standard guidance when you choose Kontext.
+   
+   * **IT WORKS** with masks, so you don't need to send the whole image (but you can). It works with Loops! (it's really nice, please test it), with negative thresholding (to some extent), outpainting (order it to outpaint), Daemon Detailer, Aura mask, and everything else the workflow does. 
+     
+     * This means you can inpaint with localized area mask and it won't VAE degrade your image. 
+     
+     * Keep in mind, If you send the whole image, it will suffer from consecutive inpaintings VAE degradation.  
+
+---
+
 ## \[v8.12]
+
 ### 🐞 Bug Prevention
 
 1. Remove dependencies (no longer needed) cutom_nodes:
+   
    * [Crystools](https://github.com/crystian/ComfyUI-Crystools) > changes all swithc nodes to index switch
    * [Logic](https://github.com/theUpsider/ComfyUI-Logic) > I had missed one Float node on Control-Panel
 
@@ -30,19 +54,21 @@
 ### ➕ New
 
 * 🔹 Making Loops!
-
+  
   * ❗ Read the notes scattered on the workflow to see how to make loops. Basic usage: separate prompts with `&&`.
   * • New custom node `loop-image` to support loops.
   * • Added group “Loop segmented mask control” to preview segmented masks.
   * • Nodes to check/filter loops in the positive prompt and apply conditioning.
-* 🔹 Batch Image Chooser
 
+* 🔹 Batch Image Chooser
+  
   * ❗ Choose which image to process in a batch via the “image chooser” node.
   * • Added group “Loops Compositing” for batch compositing with preview images.
+
 * 🔹🔹 Prompt Control Enhancements
-
+  
   * • Added text encoder and LoRa scheduling:
-
+    
     * `PC: Schedule LoRAs` node
     * `PC: Schedule Prompt (positive)` node
 
@@ -65,53 +91,61 @@
 ### ➕ New
 
 1. ❗ Option to invert aura direction. Useful when inpainting the whole background leaving a small area to not change, in this cases the aura grows OUT of the not painted area, not inside it. Another way to put it: a black aura grows inside the inpainted area when this is ON.
-Use case: if you want to inpaint the BG and leave the charcater, but want the Ksampler to understand the boundaries of said character, using a very fainted "black" aura makes the ksampler to keep the surrounding area in the beggining while slowly painting it over the denoising process since it is a gray area. (turn on ksampler preview so you can see this happening). 
-Recommended settings: Low visibility (30) with a small grow (5).  
-
+   Use case: if you want to inpaint the BG and leave the charcater, but want the Ksampler to understand the boundaries of said character, using a very fainted "black" aura makes the ksampler to keep the surrounding area in the beggining while slowly painting it over the denoising process since it is a gray area. (turn on ksampler preview so you can see this happening). 
+   Recommended settings: Low visibility (30) with a small grow (5).  
 
 ### 🔄 Refactoring
 
 2. ❗ Anything Everywhere (AE) refactor:
-
+   
    * Switched AE to Set/Get across multiple groups:
-
+     
      * for Choice: “Auto Preprocessor for Canny OR Depth”
      * “control room”
      * “Conditioning Index Switch” after ControlNet
      * “Get Unet Checkpoint Name for Metadata”
      * Alimama ControlNet Hash “Switch (Any)” on save group
+   
    * LoRA Stacker:
-
+     
      * 💊 CR Apply LoRA Stack (direct connect)
      * LoRA Stack to String Converter on "Get LoRAs names..." group
+   
    * for ALIMAMA_ControlNet on "ControlNetInpaintingAliMamaApply"
-
+   
    * for VAE 
+     
      * on ControlNetInpaintingAliMamaApply and InpaintModelCon 
-
+   
    * FOR Dev FILL
+     
      * on "InstructPixToPixConditioning"
      * on VAE encode and 2 decodes
-
+   
    * For CLIP 
+     
      * on CLIP Text Encode (Prompt pos and neg)
-
+   
    * For Model 
+     
      * on Detailer Daemon Samples and Normal Ksampler
-
+   
    * For EvalNeg
+     
      * on "Using negative? switch"
      * on control room group
      * on "Inpaint with Detail Daemon?" group
-
+   
    * For PositiveP 
+     
      * on "Text Concatenate" for metadata
-
+   
    * For Guidance for Flux Guidance
-
+   
    * For Sampler and Sheduler 
+     
      * on samplers and on save node
-
+   
    * For Steps, Seed, CFG, Denoise...
 
 ### 🐞 Bug Fixes
@@ -129,8 +163,9 @@ Recommended settings: Low visibility (30) with a small grow (5).
 ### 🐞 Bug Fixes
 
 1. ❗ Fixed: Mask was being resized by "resize image" by KJNodes that was updated and got disconnecter. I changed it to "🔧 Image Crop".
-2. ❗ Refactoring AE: New comyUI update broke "Anything Everywhere". When something was connected OF a bypassed group that could not bypass the content, it disconnects the noodle, so in a second run without bypass the workflow would be wrong. Because of that?
 
+2. ❗ Refactoring AE: New comyUI update broke "Anything Everywhere". When something was connected OF a bypassed group that could not bypass the content, it disconnects the noodle, so in a second run without bypass the workflow would be wrong. Because of that?
+   
    * a. Removed AE from "inpmask" > using Set and Get "inpaint_mask" now
    * b. Removed AE after outpainted group. This means, "main mask" and main "image for inpaint" is now connected directly where they are needed.
    * c. Removed AE from "outpadimage" > using Set and Get "padded_outpainted_image"
@@ -142,15 +177,17 @@ Recommended settings: Low visibility (30) with a small grow (5).
 ### ➕ New
 
 * 🔹 Flux Tools LoRA Depth & Canny control-net support (Alimama only; not for Flux Fill).
-
+  
   * ❗ New group for loading each LoRA model with recommended strength 0.75.
   * ❗ Control-room toggles: Depth vs Canny.
   * ❗ Depth & LoRA groups for InstructPixToPix conditioning.
   * ❗ Preprocessing & reference-image groups for Depth/Canny outpainting.
   * ❗ Localized area option for Canny/Depth outpainting.
-* 🔹🔹 Aura Mask added to COMPACT workflow with easy toggles & sliders.
-* 🔹🔹🔹 Workflow Cleanup & Improvements:
 
+* 🔹🔹 Aura Mask added to COMPACT workflow with easy toggles & sliders.
+
+* 🔹🔹🔹 Workflow Cleanup & Improvements:
+  
   1. Improved ✂️ Inpaint Crop (now auto-muted outside COMPACT).
   2. LoRA Stacker via LoraManager node.
   3. Fixed GrowMask 5px for outpainting blend.
@@ -160,9 +197,7 @@ Recommended settings: Low visibility (30) with a small grow (5).
   7. Inpaint Stitch moved outside localized group (auto-muted).
   8. Metadata improvements: clean LoRA names with 🖌️ and 🎯 emojis.
   9. Enhanced negative prompt saving logic.
-
 10. Improved prompt reader for SAM Detector metadata retrieval.
-
 
 ---
 
@@ -172,29 +207,34 @@ Recommended settings: Low visibility (30) with a small grow (5).
 
 * 🔹 Flux Tools LoRA Depth & Canny "control-net" support
   (Works with Alimama — ❗❗ it will **NOT** work with Flux Fill ❗❗)
-
+  
   * ❗ a) Add new group for Loading each LoRA model.
-
+    
     * They should be loaded all the time and will be dynamically used.
     * You can control each LoRA strength — recommended: **0.75**
+  
   * ❗ b) New toggles on the control-room group:
-
+    
     * Choose between **Depth OR Canny** (not both)
+  
   * ❗ c) Depth and LoRA groups for LoRA InstructPixToPixConditioning:
-
+    
     * Allows you to choose when Depth or Canny will start and stop
     * Conditioning falls back to standard **Alimama inpainting**
+  
   * d) New group for preprocessing the image for Depth or Canny
+  
   * e) Canny or Depth reference image for Outpainting:
-
+    
     * **Depth**: fast-fill in a more complex way
     * **Canny**: pads outpainting with black
+  
   * f) Canny or Depth works with **localized area** option
 
 * 🔹🔹 New: Aura Mask implemented back on the COMPACT workflow with convenient easy-to-use toggle and sliders.
 
 * 🔹🔹🔹 A bunch of smaller Changes:
-
+  
   1. Fixed old to new “✂️ Inpaint Crop (Improved)”
   2. LoAd Loras: now using "Lora Stacker (LoraManager)" node
      → It’s better and everyone should use LoraManager — fantastic custom node
