@@ -121,7 +121,7 @@ Because the expanded workflow might look rather monstrous and scary, and frankly
 
 ### Features
 
-Flux Dev with Alimama 🔷 Batches 🔷 Flux Fill 🔷 Flux Tool Loras: Depth or Canny 🔷 Mask grow with blur 🔷 Mask Aura 🔷 Outpainting 🔷 LoRA support 🔷 Localized Area Inpainting 🔷 Daemon Detailer 🔷 Fast Fill (like Auto1111 Fill) 🔷 Negative Thresholding 🔷 Loops 🔷 Prompt Scheduling 🔷 LoRA Scheduling 🔷 Original Image Resize 🔷 Compositing 🔷 Keep Original Metadata 🔷 Save Metadata / CivitAI Metadata
+Flux Dev with Alimama 🔷 Batches 🔷 Flux Fill 🔷 Flux Kontext ❗🔷 Flux Tool Loras: Depth or Canny 🔷 Mask grow with blur 🔷 Mask Aura 🔷 Outpainting 🔷 LoRA support 🔷 Localized Area Inpainting 🔷 Daemon Detailer 🔷 Fast Fill (like Auto1111 Fill) 🔷 Negative Thresholding 🔷 Loops 🔷 Prompt Scheduling 🔷 LoRA Scheduling 🔷 Original Image Resize 🔷 Compositing 🔷 Keep Original Metadata 🔷 Save Metadata / CivitAI Metadata
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -351,6 +351,7 @@ _(Details coming soon)_
 - [x] Discord Channel
 - [x] Implement Loops
 - [ ] Look into implementing Flux Tool: Redux
+- [x] Flux Kontext
 
 See the [open issues](https://github.com/diodiogod/Comfy-Inpainting-Works/issues) for a full list of proposed features (and known issues).
 
