@@ -1,7 +1,7 @@
 [project]
 name = "inpainting-works"
 description = "Go to the top menu>Workflow>Browse Templates. This is a collection of my Inpainting workflows for Flux (expanded and COMPACT) + others. Previously called: 'Proper Flux Control-Net inpainting and/or outpainting with batch size - Alimama or Flux Fill'. Works with Kontext now! By installing this 'node' you can always keep them up to date by updating on the manager. This is not a new custom node. You will still need to install all other custom nodes used on the workflows. You will also find my 'Flux LoRA Block Weights Preset Tester' here."
-version = "9.0.1"
+version = "9.0.1-1"
 license = {file = "LICENSE"}
 
 [project.urls]
