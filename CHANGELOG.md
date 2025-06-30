@@ -1,4 +1,12 @@
-# Changelog (from v7.0 and up)
+# Changelog
+
+---
+
+## \[v9.0.1] - 30/06/25
+
+### 🐞 Bug Fix
+
+1. ❗ I have completely forgot about the "ReferenceLatent" when I uploaded v9.0 for using Kontext. That is the reason it was giving bad results for many people. It should be giving way better results now. I also added the stitch option to add a second reference image. 
 
 ---
 
@@ -259,3 +267,5 @@
   12. Fixed: for COMPACT: "SD Prompt Reader" won't error when retrieving loaded image original metadata that used **SAM Detector** to make a mask.
 
 ---
+
+(from v7.0 and up)
