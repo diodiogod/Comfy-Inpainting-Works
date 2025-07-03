@@ -166,7 +166,7 @@ $${\color{lightgreen}2)}$$ This workflow uses a lot of custom nodes. I’m sorry
 
 $${\color{lightgreen}3)}$$ This workflow is now a ["custom_node"](https://registry.comfy.org/publishers/diogod/nodes/inpainting-works) and can be installed manually or through the ComfyUI Manager. It is not a real "node". This is so  you can keep it up-to-date more easily AND so you can access the workflow more convinently by going into you comfyUI upper tab `Workflow > Browse Templates > Comfy_Inpainting_Works`
 
-You can Find it on the ComfyUI Manager by searching for `inpainting-works`.
+You can Find it on the ComfyUI Manager by searching for `inpainting works`.
 
 OR
 
