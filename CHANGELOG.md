@@ -2,6 +2,15 @@
 
 ---
 
+## \[v9.0.1C] - 04/07/25
+
+### ➕ New
+
+1. ❗ COMPACT up to speed. Added Inicial Flux Kontext support!
+2. Added the `'context_mask_Extend_factor'` control to Area Inpainting. Use it to "zoom out/expand" the area inpanting area by a factor.
+
+---
+
 ## \[v9.0.1] - 30/06/25
 
 ### 🐞 Bug Fix
