@@ -12,4 +12,4 @@ __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
 
 # You can add a print statement to confirm in the ComfyUI console
 # that your package is being recognized and loaded.
-print(" cavité Loading Comfy-Inpainting-Works (Workflow Collection by diodiogod) cavité ")
+# print(" cavité Loading Comfy-Inpainting-Works (Workflow Collection by diodiogod) cavité ")
