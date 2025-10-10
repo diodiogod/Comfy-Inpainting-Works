@@ -2,7 +2,44 @@
 
 ---
 
-## \[v9.0.1C] - 04/07/25
+## \[v10.0.0] - 10/10/25
+
+### ➕ New - Nunchaku!
+
+1. ❗ Completely overhaul of the expanded workflow distribution. It was too cluttered, so I've expanded it to make more room for the nodes.
+
+2. Nunchaku support! You can now use Nunchaku or GGUF for all three options> Normal Flux (alimama inpainting); Flux Fill; Kontext
+
+3. You can leave mask empty to send the whole image to be inpainted/edited. Good for Kontext full image change.
+
+What was Changed: 
+
+- Fast bypasser is now a fast muter. It's better, 'Any Switch (rgthree)' works more reliably. 
+- Better organization
+- Removed Force VAE and Force Text Encoder. It was causing crashes
+
+Known "Bugs": 
+
+- Any Nunchaku model won't work with cache speed up option.
+
+---
+
+## \[v9.0.2] - 12/09/25
+
+### 🐞 Bug Fix
+
+1. ❗ New comfyUI/frontend breaks Get/Set bypassed nodes and 'Any Switch (rgthree)' won't work anymore with mismatched types whis bypassed groups. This is a fast fix, sorry for taking this long. I still intend to do a new rewroked version with Nunchaku support.
+
+What was Changed: 
+
+- get vae from both ksamplers moved out of group
+- Get_inpaint_mask and Get_DepthOrCanny moved out of outpainiting group
+- I had to add Big Contex Switch instead of Any switch in the ouptainting mask output and contex mask ouput for area inpainting.
+- Add Context instead of Any Switch right after ksampler VAE decode.
+
+---
+
+## [v9.0.1C] - 04/07/25
 
 ### ➕ New
 
